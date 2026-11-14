@@ -75,3 +75,19 @@ nmap -p 80,443 example.com
 1. 先用 NetworkX 在小图上算一遍中心性和社区划分。
 2. 再用 ping / traceroute 理解一条请求的实际路径。
 3. 最后用 tcpdump 或 Wireshark 看真实数据包，对照过滤器练习。
+
+## 四、仓库内容
+
+- `examples/social_network_example.py`：社会网络分析示例，读入 `examples/sample_edges.csv`，计算中心性与社区划分，并导出 Gephi 文件。
+- `examples/sample_edges.csv`：示例边列表数据。
+- `requirements.txt`：Python 依赖（networkx、matplotlib、pandas）。
+- `tutorials/r_igraph.md`：R 语言社会网络分析（igraph）教程。
+- `tutorials/computer_network_practice.md`：计算机网络分析练习。
+- `.gitignore`：忽略 Python 缓存、虚拟环境、抓包文件等。
+
+运行示例：
+
+```bash
+pip install -r requirements.txt
+python examples/social_network_example.py
+```
